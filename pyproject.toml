@@ -3,3 +3,13 @@ name = "grocery-app"
 version = "0.1.0"
 description = ""
 authors = ["Ritul Jain"]
+packages = [
+  { include = "grocery_app", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0" # streamlit explicitly says it needs version != python 3.9
+openai = "^1.93.0"
+google-api-python-client = "^2.174.0"
+streamlit = "^1.46.1"
+python-dotenv = "^1.1.1"
