@@ -10,8 +10,10 @@ packages = [
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0" # streamlit explicitly says it needs version != python 3.9
 openai = "^1.93.0"
+openai-agents = "^0.1.0"
 google-api-python-client = "^2.174.0"
 streamlit = "^1.46.1"
 python-dotenv = "^1.1.1"
 google-auth-httplib2 = "^0.2.0"
 google-auth-oauthlib = "^1.2.2"
+nest-asyncio = "^1.6.0"
