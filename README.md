@@ -11,12 +11,12 @@ This project is a modern, AI-powered meal planning and grocery inventory managem
 See the app in action! Watch these quick demos to understand how the app works:
 
 ### 📋 Meal Planner Demo
-![Meal Planner Demo](src/demo/Meal%20Planner.mov)
+![Meal Planner Demo](demo/meal-planner-demo.gif)
 
 *Watch how to plan meals, extract ingredients with AI, and generate inventory-aware shopping lists.*
 
 ### 📦 Inventory Checker Demo  
-![Inventory Checker Demo](src/demo/Inventory%20Checker.mov)
+![Inventory Checker Demo](demo/inventory-checker-demo.gif)
 
 *See how to manage your inventory directly in the app with Google Sheets integration.*
 
