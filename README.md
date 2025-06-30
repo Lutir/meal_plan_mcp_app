@@ -1,6 +1,10 @@
 # 🍽️ Grocery App: AI Meal Planner & Inventory
 
-## 🚀 Project Status (June 2025)
+## 🚀 What is this Project about?
+
+So recently there's been this whole chatter about AI Agents and MCP servers. A lot of people in the software industry are busy creating cool workflows to automate their daily life problems - which is impressive and got me thinking. What's a good project idea to play around with AI Agents and have fun while learning stuff?
+
+Meal Planning and shopping for groceries is something that everyone does almost once a week (I often forget a couple of the things that i wanted to order and end up doing several trips to my local grocery store in a week lol). The idea is to create a AI first application that can help with Meal Planning and Inventory Management for households. Which brings us to the description of the project.
 
 This project is a modern, AI-powered meal planning and grocery inventory management app with a beautiful Streamlit UI. It is designed for maximum intelligence and flexibility, with Google Sheets integration and OpenAI Agents SDK for ingredient extraction.
 
@@ -11,20 +15,23 @@ This project is a modern, AI-powered meal planning and grocery inventory managem
 See the app in action! Watch these quick demos to understand how the app works:
 
 ### 📋 Meal Planner Demo
+
 ![Meal Planner Demo](demo/meal-planner-demo.gif)
 
-*Watch how to plan meals, extract ingredients with AI, and generate inventory-aware shopping lists.*
+_Watch how to plan meals, extract ingredients with AI, and generate inventory-aware shopping lists._
 
-### 📦 Inventory Checker Demo  
+### 📦 Inventory Checker Demo
+
 ![Inventory Checker Demo](demo/inventory-checker-demo.gif)
 
-*See how to manage your inventory directly in the app with Google Sheets integration.*
+_See how to manage your inventory directly in the app with Google Sheets integration._
 
 ---
 
 ## ✅ **What is Implemented**
 
 ### 1. **Editable Inventory Management (Google Sheets)**
+
 - **UI:** Sidebar toggle lets you switch to "Inventory Checker".
 - **Features:**
   - View your current inventory (read from Google Sheets).
@@ -33,6 +40,7 @@ See the app in action! Watch these quick demos to understand how the app works:
   - Refresh inventory with a button.
 
 ### 2. **Flexible Meal Planning UI**
+
 - **UI:** Sidebar toggle lets you switch to "Meal Planner".
 - **Features:**
   - Plan meals for any number of days (1-7) with slider.
@@ -42,12 +50,14 @@ See the app in action! Watch these quick demos to understand how the app works:
   - Day-by-day or master view (all days at once).
 
 ### 3. **AI-Powered Ingredient Extraction**
+
 - **How it works:**
   - For each dish you enter, the app uses an **OpenAI Agent** (via the OpenAI Agents SDK) to extract a list of main raw ingredients.
   - The agent uses its own AI knowledge and can call the `get_recipe_ingredients` tool for a few common dishes.
   - **Excludes**: Spices, oil, salt, pepper, and pantry staples. Only main raw ingredients are included.
 
 ### 4. **Inventory-Aware Shopping List Generation** ⭐ **NEW!**
+
 - **Features:**
   - **Smart Inventory Subtraction**: Automatically subtracts what you already have from what you need.
   - **Unit Matching**: Intelligently handles different units (e.g., "bottles" vs "gallons" of milk).
@@ -56,6 +66,7 @@ See the app in action! Watch these quick demos to understand how the app works:
   - **Historical Tracking**: View and manage all your saved shopping lists.
 
 ### 5. **Shopping Lists Management** ⭐ **NEW!**
+
 - **UI:** Sidebar toggle lets you switch to "Shopping Lists".
 - **Features:**
   - View all saved shopping lists with creation dates and item counts.
@@ -64,6 +75,7 @@ See the app in action! Watch these quick demos to understand how the app works:
   - Persistent storage in Google Sheets with separate sheets for each list.
 
 ### 6. **Three Main Views**
+
 - **🍽️ Meal Planner**: Plan meals and generate AI-powered shopping lists
 - **📦 Inventory Checker**: Edit and manage your current inventory
 - **🛒 Shopping Lists**: View and manage saved shopping lists
@@ -71,6 +83,7 @@ See the app in action! Watch these quick demos to understand how the app works:
 ---
 
 ## 🟡 **Coming Soon!:**
+
 - **Order/export to Instacart or other services.**
 - **Email Integration where you can export Meal Plans and share it with people.**
 - **AI meal suggestions based on inventory.**
@@ -117,6 +130,7 @@ src/grocery_app/
 ```
 
 **Key Files:**
+
 - **`streamlit_app.py`**: Main application with three views (Meal Planner, Inventory Checker, Shopping Lists)
 - **`sheet_tools.py`**: Google Sheets integration for inventory management and shopping list storage
 - **`ingredient_extractor.py`**: OpenAI-powered ingredient extraction from meal names
@@ -127,6 +141,7 @@ src/grocery_app/
 ## 📝 **Environment Variables**
 
 Set up your `.env` or environment variables for:
+
 - `OPENAI_API_KEY` (for OpenAI Agents SDK)
 - `GOOGLE_SHEETS_CREDENTIALS_JSON` (path to your Google Sheets service account JSON)
 - `GROCERIES_INVENTORY_SHEET_ID` (your Google Sheet ID)
@@ -134,6 +149,7 @@ Set up your `.env` or environment variables for:
 ---
 
 ## 🧩 **Extending the App**
+
 - Add order/export features to send your list to Instacart, Amazon Fresh, etc.
 - Add AI meal suggestions based on current inventory.
 - Add more AI tools (nutrition lookup, price lookup, etc.) as Python functions and register them with the agent.
@@ -142,6 +158,7 @@ Set up your `.env` or environment variables for:
 ---
 
 ## 🏁 **Summary**
+
 - **Editable inventory** (Google Sheets)
 - **Flexible meal planner**
 - **AI-powered ingredient extraction** (no fallback/manual logic)
